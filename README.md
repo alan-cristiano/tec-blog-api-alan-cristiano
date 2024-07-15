@@ -81,7 +81,7 @@ docker compose down
 
 ## Documentação
 
-Acesse a interface Swagger das rotas da API em http://localhost:{PORT}/docs
+Acesse a interface Swagger das rotas da API em `http://localhost:{PORT}/docs`
 
 ### Diagrama de rotas
 
