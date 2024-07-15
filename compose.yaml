@@ -1,0 +1,18 @@
+services:
+    backend:
+        container_name: tec_blog_api
+        build:
+            context: ./app
+            dockerfile: Dockerfile
+        environment:
+            - DATABASE_URL=${DATABASE_URL}
+            - JWT_SECRET=${JWT_SECRET}
+            - JWT_EXPIRES_IN=${JWT_EXPIRES_IN}
+            - PORT=${PORT}
+        ports:
+            - ${PORT}:${PORT}
+        env_file:
+            - .env
+        command: "npm run start:dev"
+        volumes:
+            - ./app/src/:/app/src
