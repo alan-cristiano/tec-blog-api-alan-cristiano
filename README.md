@@ -60,7 +60,7 @@ Esse projeto utiliza as seguintes variáveis de ambiente:
 | DATABASE_URL   | Connection string para conexão com o MongoDB Atlas               | [x]         |
 | JWT_SECRET     | Chave secreta do Token                                           | [x]         |
 | JWT_EXPIRES_IN | Tempo de expiração do Token (ex.: "1h", "30m", etc.)             | [x]         |
-| PORT           | Porta utilizada para o recebimento das requisições pelo servidor | [ ]         |
+| PORT           | Porta utilizada para o recebimento das requisições pelo servidor | [x]         |
 
 ## Inicializando a aplicação com Docker
 
@@ -71,11 +71,7 @@ cd <project_name>
 docker compose up
 ```
 
-Caso a variável de ambiente `PORT` não seja definida, o servidor da API rodará, por padrão, na porta 3000.
-
-Navegue até `http://localhost:3000` para acessar a URL base da API.
-
-Caso a variável de ambiente `PORT` tenha sido definida, substituir a numeração indicada na URL acima.
+Navegue até `http://localhost:{PORT}` para acessar a URL base da API, sendo `{PORT}`a numeração da variável de ambiente definida anteriormente
 
 Para parar a aplicação e remover os containers, abra um novo terminal e no diretório raiz do projeto utilize o comando:
 
@@ -85,7 +81,7 @@ docker compose down
 
 ## Documentação
 
-Acesse a interface Swagger das rotas da API em http://localhost:3000/docs
+Acesse a interface Swagger das rotas da API em http://localhost:{PORT}/docs
 
 ### Diagrama de rotas
 

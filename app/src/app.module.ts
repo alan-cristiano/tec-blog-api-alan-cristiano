@@ -28,7 +28,7 @@ import * as Joi from 'joi';
         DATABASE_URL: Joi.string().required(),
         JWT_SECRET: Joi.string().required(),
         JWT_EXPIRES_IN: Joi.string().required(),
-        PORT: Joi.string().default('3000'),
+        PORT: Joi.string().required(),
       }),
     }),
     PrismaModule,
